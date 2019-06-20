@@ -1,83 +1,113 @@
-<!doctype html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
 <head>
-  <title>Venan24.me</title>
-  <link rel="stylesheet" type="text/css" href="/css/reset-min.css">
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Vollkorn">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-  <style>
-    html {
-      background-color: #EFEFEE;
-    }
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-    body {
-      font-family: 'Roboto Slab', serif;
-    }
+     <title>Venan Osmić</title>
 
-    h1 {
-      font-size: 50px;
-      text-shadow: 2px 2px 1px #FFFFFF;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: 36px;
-      font-weight: bold;
-      color: #444444;
-      text-shadow: 2px 2px 1px #FFFFFF;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 24px;
-      color: #555555;
-      margin-bottom: 20px;
-    }
-
-    a {
-      color: #555555;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #333333;
-    }
-
-    #container {
-      width: 760px;
-      margin: 0 auto;
-      padding-top: 60px;
-    }
-  </style>
+     <style type="text/css">
+        * { margin: 0; padding: 0; }
+        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; background: url(images/noise.jpg); }
+        .clear { clear: both; }
+        #page-wrap { width: 800px; margin: 40px auto 60px; }
+        #pic { float: right; margin: -30px 0 0 0; }
+        h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
+        h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
+        h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
+        p { margin: 0 0 16px 0; }
+        a { color: #000; text-decoration: none; }
+        a:hover { border-bottom: 1px dotted #999; color: black; }
+        ul { margin: 0 0 32px 17px; }
+        #objective { width: 500px; float: left; }
+        #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
+        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
+        dd { width: 600px; float: right; }
+        dd.clear { float: none; margin: 0; height: 15px; }
+		.noLink { text-decoration:none; }
+     </style>
 </head>
 
 <body>
-  <div id="container">
-    <h1>Venan Osmić</h1>
 
-    <h2>about</h2>
-    <p>
-      I am young and passionate web developer living in Sarajevo. I am studying Information Technologies and I'm doing my best to learn more every day. I like working with JavaScript, PHP and MySQL.
-      <p>
+    <div id="page-wrap">
+    
+        <img src="images/img.png" alt="Venan Osmic" id="pic" />
+    
+        <div id="contact-info" class="vcard">
+        
+            <!-- Microformats! -->
+        
+            <h1 class="fn">Venan Osmić</h1>
+        
+            <p>
+                Github: <a href="https://github.com/Venan24"><span class="tel">github.com/Venan24</span></a><br />
+                Email: <a class="email" href="mailto:greatoldone@lovecraft.com">venanosmic24@gmail.com</a>
+            </p>
+        </div>
+                
+        <div id="objective">
+            <p>
+                I am young and passionate web developer living in Sarajevo. I like working with JavaScript, PHP, C# and MySQL. 
+            </p>
+        </div>
+        
+        <div class="clear"></div>
+        
+        <dl>
+            <dd class="clear"></dd>
+            
+            <dt>Education</dt>
+            <dd>
+                <h2>Faculty of Engineering and Natural Sciences @ IBU.edu.ba</h2>
+                <p><strong>Department:</strong> Information Technologies
+            </dd>
+            
+            <dd class="clear"></dd>
+            
+            <dt>Skills</dt>
+            <dd>
+                <h2>Operatig Systems</h2>
+                <p>Linux, Windows</p>
+                
+                <h2>Programming</h2>
+                <p>Angular 5+, AngularJS, PHP, NodeJS, Python, Java, C#, MySQL (DB), Mongo (DB), Cosmos (DB)</p>
+				
+				<h2>Familiar With</h2>
+                <p>C++, Matlab, Wolfram Mathematica, Machine Learning</p>
+            </dd>
+            
+            <dd class="clear"></dd>
+            
+            <dt>Experience</dt>
+            <dd>
+                <h2>Softray Solutions <span>Software Developer Nov 2018 - Apr 2019</span></h2>
+                <ul>
+                    <li>Web Development with Angular 7, C# and Cosmos DB</li>
+                    <li>Mobile Development of the same web app in Ionic Framework</li>
+                    <br>
+					<p>- I stopped working because of college obligations.</p>
+                </ul>
+            </dd>
+            
+            <dd class="clear"></dd>
+            
+            <dt>Projects</dt>
+            <dd>
+                <ul>
+                    <li><a href="https://github.com/Venan24/employeeMng">Employee Management System (MEAN Stack)</li>
+                    <li><a href="https://github.com/Venan24/SCMS">Sales and Company Management System (PHP)</li>
+					<li><a href="https://github.com/Venan24/LinuxMonitoringPython">Linux Server Monitoring (Linux Script in Python)
+					<li><a href="https://github.com/Venan24/LinuxMonitoring">Linux Server Monitoring (Web App)
+                    <li><a href="https://github.com/Venan24/D-Hondt-Raspodjela-Mandata">D'Hondt Raspodjela Mandata (Python)</li>
+                </ul>
+            </dd>
+        </dl>
+    
+    </div>
 
-        <h2>projects</h2>
-        <p>
-          <a href="https://github.com/Venan24/employeeMng">MEAN Employee Management</a><br/>
-          <a href="https://github.com/Venan24/SCMS">Sales and Company Management System</a><br/>
-          <a href="https://github.com/Venan24/LinuxMonitoringPython">Linux Server Monitoring (Python Script)</a><br/>
-          <a href="https://github.com/Venan24/LinuxMonitoring">Linux Server Monitoring (Web App)</a>
-        </p>
-
-        <h2>contact</h2>
-        <p>venanosmic24@gmail.com<br/>
-          <a href="http://github.com/Venan24">github</a><br/>
-          <a href="https://www.linkedin.com/in/venanosmic/">linkedin</a><br/>
-          <a href="http://www.facebook.com/Venan24">facebook</a><br/>
-          <a href="http://instagram.com/Venan24">instagram</a>
-        </p>
-
-  </div>
 </body>
+
 </html>

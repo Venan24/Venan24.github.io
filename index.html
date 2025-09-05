@@ -6,44 +6,148 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4QGM509JSP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4QGM509JSP');
-</script>
-<!-- End Google Tag Manager -->
-	
-<script type="text/javascript">
-    function sdkGoBack() {
-        SDKBack.sdkGoBack();
-    }
-</script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WM6ZZLX');</script>
+    <!-- End Google Tag Manager -->
 
      <title>Venan Osmić</title>
 
      <style type="text/css">
-        * { margin: 0; padding: 0; }
-        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; background: url(images/noise.jpg); }
-        .clear { clear: both; }
-        #page-wrap { width: 800px; margin: 40px auto 60px; }
-        #pic { float: right; margin: -30px 0 0 0; }
-        h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
-        h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
-        h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
-        p { margin: 0 0 16px 0; }
-        a { color: #000; text-decoration: none; }
-        a:hover { border-bottom: 1px dotted #999; color: black; }
-        ul { margin: 0 0 32px 17px; }
-        #objective { width: 500px; float: left; }
-        #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
-        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
-        dd { width: 600px; float: right; }
-        dd.clear { float: none; margin: 0; height: 15px; }
-		.noLink { text-decoration:none; }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font: 16px Helvetica, Sans-Serif;
+            line-height: 24px;
+            background: url(images/noise.jpg);
+        }
+        #page-wrap {
+            width: 800px;
+            max-width: 90%;
+            margin: 40px auto 60px;
+        }
+        #pic {
+            float: right;
+            margin: -30px 0 0 0;
+        }
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+        .clear {
+            clear: both;
+            height: 15px;
+        }
+        #objective {
+            width: 500px;
+            float: left;
+        }
+        #objective p {
+            font-family: Georgia, Serif;
+            font-style: italic;
+            color: #666;
+        }
+
+        h1 {
+            margin: 0 0 16px 0;
+            padding: 0 0 16px 0;
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: -2px;
+            border-bottom: 1px solid #999;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin: 0 0 12px 0;
+            display: flex;
+            align-items: baseline;
+            gap: 8px; /* space between company and position */
+            flex-wrap: wrap; /* allow wrap on small widths */
+        }
+
+        h2 a {
+            font-weight: bold;
+            text-decoration: none;
+            color: #000;
+        }
+
+        h2 .position {
+            font-size: 16px;
+            font-weight: normal;
+            color: #666;
+        }
+
+        h2 .position::before {
+            content: "[";
+            margin-right: 2px;
+            font-weight: bold;
+        }
+        h2 .position::after {
+            content: "]";
+            margin-left: 2px;
+            font-weight: bold;
+        }
+
+        /* push dates to the far right, but allow wrap on small screens */
+        h2 .dates {
+            font-size: 14px;
+            font-style: italic;
+            color: #999;
+            margin-left: auto;
+        }
+
+        p {
+            margin: 0 0 16px 0;
+        }
+
+        a:hover {
+            border-bottom: 1px dotted #999;
+            color: black;
+        }
+
+        ul {
+            margin: 0 0 32px 17px;
+        }
+
+        dt {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: right;
+            padding: 0 26px 0 0;
+            width: 150px;
+            float: left;
+            border-right: 1px solid #999;
+        }
+        dd {
+            width: 600px;
+            float: right;
+        }
+        dd.clear {
+            float: none;
+            margin: 0;
+            height: 15px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* two equal columns */
+            column-gap: 30px;
+            row-gap: 8px;
+            margin-top: 6px;
+        }
+
+        .skills-grid p {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
      </style>
 </head>
 
@@ -64,15 +168,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h1 class="fn">Venan Osmić</h1>
         
             <p>
-                Github: <a href="https://github.com/Venan24" target="_blank"><span class="tel">github.com/Venan24</span></a><br />
 				Linkedin: <a href="https://www.linkedin.com/in/venanosmic/" target="_blank"><span class="tel">Venan Osmić</span></a><br />
-                Email: <a class="email" href="mailto:venanosmic24@gmail.com">venanosmic24@gmail.com</a>
+                Email: <a class="email" href="mailto:venanosmic@gmail.com">venanosmic@gmail.com</a>
             </p>
         </div>
                 
         <div id="objective">
             <p>
-                Making things work.
+                With a background in software engineering and a move into leadership, I focus on making projects clear for both clients and engineers. My goal is to deliver high-quality software solutions that meet client needs effectively.
             </p>
         </div>
         
@@ -80,68 +183,69 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
         <dl>
             <dd class="clear"></dd>
-            
+            <dt>Experience</dt>
+
+            <dd>
+                <h2>
+                    <a href="https://htec.com/" target="_blank">HTEC</a>
+                    <span class="position">Engineering and Delivery Lead</span>
+                    <span class="dates">Apr 2023 – Present</span>
+                </h2>
+                <p>Lead cross-functional teams delivering software solutions for various platforms. Responsible for client communication, project delivery, and aligning engineering with business goals. Support upsell and cross-sell initiatives through presentations, proposals, and technical strategy.</p>
+            </dd>
+            <dd class="clear"></dd>
+
+            <dd>
+                <h2>
+                    <a href="http://maestralsolutions.com/" target="_blank">Maestral Solutions</a>
+                    <span class="position">Software Developer</span>
+                    <span class="dates">Dec 2020 – Apr 2023</span>
+                </h2>
+                <p>Developed native Android applications in Kotlin for the telecommunications industry. Focused on architecture, feature development, and backend API integrations. Contributed to project delivery and team collaboration, ensuring reliable mobile experiences.</p>
+            </dd>
+            <dd class="clear"></dd>
+
+            <dd>
+                <h2>
+                    <a href="https://tribeOS.io" target="_blank">TribeOS</a>
+                    <span class="position">Software Developer</span>
+                    <span class="dates">Sep 2019 – Dec 2020</span>
+                </h2>
+                <p>Contributed to building a new digital advertising platform from the ground up, focusing on backend development and automation. The mission was to build a fair and transparent ad marketplace with strong anti-fraud mechanisms.</p>
+            </dd>
+            <dd class="clear"></dd>
+
+            <dd>
+                <h2>
+                    <a href="https://softraysolutions.com/" target="_blank">Softray Solutions</a>
+                    <span class="position">Software Developer Internship</span>
+                    <span class="dates">Nov 2018 – Apr 2019</span>
+                </h2>
+                <p>Contributed to web development using Angular 7, C#, and Cosmos DB, as well as building a companion mobile app in Ionic Framework. Gained early experience in both frontend and mobile development. Left the role to pursue academic advancement.</p>
+            </dd>
+            <dd class="clear"></dd>
+
             <dt>Education</dt>
             <dd>
-                <h2>Faculty of Engineering and Natural Sciences @ IBU.edu.ba</h2>
+                <h2>Faculty of Engineering and Natural Sciences @ <a href="https://ibu.edu.ba/" target="_blank">IBU</a></h2>
                 <p><strong>Department:</strong> Information Technologies<br>
                 <strong>Degree:</strong> Bachelor of Science
             </dd>
-            
-            <dd class="clear"></dd>
-			
-            <dt>Experience</dt>
-            <dd>
-                <h2><a href="https://www.mistral.ba/" target="_blank">Mistral</a> <span>Software Developer Dec 2020 - Now</span></h2>
-                <ul>
-                    <li>Android Development in Kotlin</li>
-                </ul>
-                <p>Working on various tasks to create native Android app that will be used in telecomunication industry.</p>
-            </dd>
-            <dd>
-		    <h2><a href="https://tribeOS.io" target="_blank">TribeOS</a><span>Software Developer Sep 2019 - Dec 2020</span></h2>
-                <ul>
-                    <li>Web development with custom PHP framework combined with React and MongoDB</li>
-                </ul>
-				<p>Mission was to create the fairest, most transparent, most profitable digital advertising marketplace in the world by ending ad fraud, decentralizing authority, increasing accountability, transparency, and ease-of-use for advertisers and publishers alike.</p>
-            </dd>
-            <dd>
-                <h2><a href="https://softraysolutions.com/" target="_blank">Softray Solutions</a> <span>Software Developer Nov 2018 - Apr 2019</span></h2>
-                <ul>
-                    <li>Web Development with Angular 7, C# and Cosmos DB</li>
-                    <li>Mobile Development of the same web app in Ionic Framework</li>
-                    <br>
-					<p>- Reason for leaving this position is to pursue academic advancement.</p>
-                </ul>
-            </dd>
-            
             <dd class="clear"></dd>
             
             <dt>Skills</dt>
             <dd>
-                <h2>Operatig Systems</h2>
-                <p>Linux, Windows</p>
-                
-                <h2>Programming</h2>
-                <p>Kotlin, Angular 5+, PHP, NodeJS, Python, C#, MySQL (DB), Mongo (DB), Cosmos (DB)</p>
-				
-				<h2>Familiar With</h2>
-                <p>Java, C++, Matlab, Wolfram Mathematica, Machine Learning</p>
+                <div class="skills-grid">
+                    <p>Leadership & People Management</p>
+                    <p>Project Delivery</p>
+                    <p>Stakeholder Communication</p>
+                    <p>Client Relationship Management</p>
+                    <p>Designing & Delivering Software Solutions</p>
+                    <p>Technical Roadmapping</p>
+                    <p>Pitching & Presentations</p>
+                </div>
             </dd>
-            
             <dd class="clear"></dd>
-            
-            <dt>Projects</dt>
-            <dd>
-                <ul>
-                    <li><a href="https://github.com/Venan24/employeeMng">Employee Management System (MEAN Stack)</a></li>
-                    <li><a href="https://github.com/Venan24/SCMS">Sales and Company Management System (PHP)</a></li>
-		            <li><a href="https://github.com/Venan24/LinuxMonitoringPython">Linux Server Monitoring (Linux Script in Python)</a></li>
-		            <li><a href="https://github.com/Venan24/LinuxMonitoring">Linux Server Monitoring (Web App)</a></li>
-                    <li><a href="https://github.com/Venan24/D-Hondt-Raspodjela-Mandata">D'Hondt Raspodjela Mandata (Python)</a></li>
-			        <li><input type="button" value="I am using this button for testing one of the projects" onClick="sdkGoBack()" /></li>
-                </ul>
-            </dd>
         </dl>
     
     </div>

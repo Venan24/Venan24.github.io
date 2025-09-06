@@ -1,247 +1,319 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
+<!doctype html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WM6ZZLX');</script>
-    <!-- End Google Tag Manager -->
+  <meta charset="utf-8" />
+  <title>Venan Osmić | Portfolio & CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
 
-     <title>Venan Osmić</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WM6ZZLX');</script>
+  <!-- End Google Tag Manager -->
 
-     <style type="text/css">
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font: 16px Helvetica, Sans-Serif;
-            line-height: 24px;
-            background: url(images/noise.jpg);
-        }
-        #page-wrap {
-            width: 800px;
-            max-width: 90%;
-            margin: 40px auto 60px;
-        }
-        #pic {
-            float: right;
-            margin: -30px 0 0 0;
-        }
-        a {
-            color: #000;
-            text-decoration: none;
-        }
-        .clear {
-            clear: both;
-            height: 15px;
-        }
-        #objective {
-            width: 500px;
-            float: left;
-        }
-        #objective p {
-            font-family: Georgia, Serif;
-            font-style: italic;
-            color: #666;
-        }
+  <style>
+    /* ---------- Design tokens ---------- */
+    :root{
+      --bg: #0b0d12;
+      --panel: #111827;
+      --text: #e7ecf2;
+      --muted: #a7b0bd;
+      --link: #60a5fa;
+      --border: rgba(255,255,255,.12);
+      --max: 960px;
+      --radius: 14px;
+      --s-1: .5rem; --s-2: 1rem; --s-3: 1.5rem; --s-4: 2rem; --s-5: 3rem;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f6f8fb; --panel:#ffffff; --text:#0b1220; --muted:#475569;
+        --link:#0ea5e9; --border: rgba(2,6,23,.12);
+      }
+    }
 
-        h1 {
-            margin: 0 0 16px 0;
-            padding: 0 0 16px 0;
-            font-size: 42px;
-            font-weight: bold;
-            letter-spacing: -2px;
-            border-bottom: 1px solid #999;
-        }
+    /* ---------- Base ---------- */
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{ text-decoration:underline }
+    img{max-width:100%; height:auto; display:block}
 
-        h2 {
-            font-size: 20px;
-            margin: 0 0 12px 0;
-            display: flex;
-            align-items: baseline;
-            gap: 8px; /* space between company and position */
-            flex-wrap: wrap; /* allow wrap on small widths */
-        }
+    /* ---------- Layout ---------- */
+    .container{
+      max-width:var(--max);
+      margin-inline:auto;
+      padding:clamp(1rem,2.5vw,2rem);
+    }
+    .card{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding: clamp(1rem, 2.5vw, var(--s-4));
+      box-shadow: 0 6px 20px rgba(0,0,0,.08);
+    }
+    .stack > * + *{ margin-top: var(--s-3) }
 
-        h2 a {
-            font-weight: bold;
-            text-decoration: none;
-            color: #000;
-        }
+    /* Header grid */
+    .header{
+      display:grid;
+      grid-template-columns: 1fr auto;
+      gap: var(--s-3);
+      align-items: center;
+    }
+    .avatar{
+      width: 112px; aspect-ratio:1/1; border-radius: 50%;
+      border:1px solid var(--border); overflow:hidden;
+    }
+    @media (max-width: 640px){
+      .header{ grid-template-columns: 1fr; text-align:left }
+      .avatar{ width:84px }
+    }
+    .header-intro {
+      font-style: italic;
+      max-width: 640px;
+      margin: 0 auto;
+      color: var(--muted);
+    }
 
-        h2 .position {
-            font-size: 16px;
-            font-weight: normal;
-            color: #666;
-        }
+    /* Typography */
+    h1{
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      line-height:1.15; margin:0 0 .25rem 0;
+    }
+    .subtitle{ color:var(--muted); margin:0 0 var(--s-2) 0 }
+    h2{
+      font-size: clamp(1.15rem, 2.4vw, 1.35rem);
+      margin:0 0 .5rem 0;
+    }
+    p{ margin:0 0 .75rem 0; color:var(--text) }
+    .muted{ color:var(--muted) }
 
-        h2 .position::before {
-            content: "[";
-            margin-right: 2px;
-            font-weight: bold;
-        }
-        h2 .position::after {
-            content: "]";
-            margin-left: 2px;
-            font-weight: bold;
-        }
+    /* Section spacing */
+    section + section{ margin-top: var(--s-4) }
 
-        /* push dates to the far right, but allow wrap on small screens */
-        h2 .dates {
-            font-size: 14px;
-            font-style: italic;
-            color: #999;
-            margin-left: auto;
-        }
+    /* Experience list */
+    .xp{
+      display:grid;
+      gap: var(--s-3);
+    }
+    .xp-item{
+      display:grid;
+      gap:.25rem;
+      border-left:2px solid var(--border);
+      padding-left: var(--s-3);
+    }
+    .xp-head{
+      display:flex; gap:.75rem; flex-wrap:wrap; align-items:baseline;
+    }
+    .xp-role{ color:var(--muted) }
+    .xp-dates{ margin-left:auto; color:var(--muted); font-style:italic }
+    @media (max-width:640px){ .xp-dates{ margin-left:0 } }
 
-        p {
-            margin: 0 0 16px 0;
-        }
+    /* Skills grid */
+    .skills{
+      display:grid; gap:.5rem;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+    @media (max-width:560px){
+      .skills{ grid-template-columns: 1fr }
+    }
+    .chip{
+      background: transparent;
+      border:1px solid var(--border);
+      border-radius: 999px;
+      padding:.4rem .75rem;
+      display:inline-block;
+      color:var(--muted);
+    }
 
-        a:hover {
-            border-bottom: 1px dotted #999;
-            color: black;
-        }
+    /* Contact row */
+    .contact{
+      display:flex; gap:1rem; flex-wrap:wrap; align-items:center;
+      color:var(--muted)
+    }
+    .contact a{ color:inherit }
+    .contact b{ color:var(--text) }
 
-        ul {
-            margin: 0 0 32px 17px;
-        }
+    /* Print: simple, white background, no shadows */
+    @media print{
+      :root{ --bg:#fff; --panel:#fff; --text:#000; --muted:#444; --border:#ccc }
+      body{ background:#fff }
+      .card{ box-shadow:none; border:1px solid #ccc }
+      a{ color:#000; text-decoration:none }
+    }
 
-        dt {
-            font-style: italic;
-            font-weight: bold;
-            font-size: 18px;
-            text-align: right;
-            padding: 0 26px 0 0;
-            width: 150px;
-            float: left;
-            border-right: 1px solid #999;
-        }
-        dd {
-            width: 600px;
-            float: right;
-        }
-        dd.clear {
-            float: none;
-            margin: 0;
-            height: 15px;
-        }
+    /* Accessibility helpers */
+    @media (prefers-reduced-motion: reduce){
+      *{ animation:none !important; transition:none !important }
+    }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* two equal columns */
-            column-gap: 30px;
-            row-gap: 8px;
-            margin-top: 6px;
-        }
+    .contact-icons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.75rem;
+    }
 
-        .skills-grid p {
-            margin: 0;
-            font-size: 16px;
-            color: #333;
-        }
-     </style>
+    .contact-icons a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .contact-icons a:hover {
+    background: var(--link);
+    color: #fff;
+    transform: translateY(-2px);
+    }
+
+    .contact-icons i {
+    font-size: 1.1rem;
+    }
+  </style>
 </head>
-
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WM6ZZLX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WM6ZZLX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-    <div id="page-wrap">
-        <img src="images/img.png" alt="Venan Osmic" id="pic" />
-
-        <div id="contact-info" class="vcard">
-            <h1 class="fn">Venan Osmić</h1>
-            <p>
-				Linkedin: <a href="https://www.linkedin.com/in/venanosmic/" class="contact_linkedin" target="_blank"><span class="tel">Venan Osmić</span></a><br />
-                Email: <a class="email" href="mailto:contact@venan24.me">contact@venan24.me</a>
-            </p>
+  <main class="container">
+    <!-- Header / Intro -->
+    <header class="card stack" aria-label="Header">
+      <div class="header">
+        <div>
+          <h1>Venan Osmić</h1>
+          <div class="contact" aria-label="Contact">
+            <span>LinkedIn: <a href="https://www.linkedin.com/in/venanosmic/" class="contact_linkedin" target="_blank" rel="noopener"><b>venanosmic</b></a></span>
+            <span>Email: <a href="mailto:contact@venan24.me" class="email"><b>contact@venan24.me</b></a></span>
+          </div>
         </div>
-
-        <div id="objective">
-            <p>
-                With a background in software engineering and a move into leadership, I focus on making projects clear for both clients and engineers. My goal is to deliver high-quality software solutions that meet client needs effectively.
-            </p>
+        <div class="avatar" aria-hidden="true">
+          <!-- Use your existing image path -->
+          <img src="images/img.png" alt="Portrait of Venan Osmić">
         </div>
-        <div class="clear"></div>
+      </div>
 
-        <dl>
-            <dd class="clear"></dd>
-            <dt>Experience</dt>
+      <p class="header-intro" style="margin:0">
+        With a background in software engineering and evolving into leadership positions, I focus on making work clear for both clients and engineers. My goal is to deliver high-quality software solutions that meet client needs effectively.
+      </p>
+    </header>
 
-            <dd>
-                <h2>
-                    <a href="https://htec.com/" class="exp_link" target="_blank">HTEC</a>
-                    <span class="position">Engineering and Delivery Lead</span>
-                    <span class="dates">Apr 2023 - Present</span>
-                </h2>
-                <p>Lead cross-functional teams delivering software solutions for various platforms. Responsible for client communication, project delivery, and aligning engineering with business goals. Support upsell and cross-sell initiatives through presentations, proposals, and technical strategy.</p>
-            </dd>
-            <dd class="clear"></dd>
+    <!-- Experience -->
+    <section class="card stack" id="experience" aria-label="Experience">
+      <h2>Experience</h2>
+      <div class="xp">
+        <article class="xp-item">
+          <div class="xp-head">
+            <a href="https://htec.com/" class="exp_link" target="_blank" rel="noopener"><b>HTEC</b></a>
+            <span class="xp-role" id="job_title">Engineering & Delivery Lead</span>
+            <span class="xp-dates" id="job_duration">Apr 2023 - Present</span>
+          </div>
+          <p class="muted">
+            Lead cross-functional teams delivering software solutions for various platforms. Responsible for client communication, project delivery, and aligning engineering with business goals. Support upsell and cross-sell initiatives through presentations, proposals, and technical strategy.
+          </p>
+        </article>
 
-            <dd>
-                <h2>
-                    <a href="http://maestralsolutions.com/" class="exp_link" target="_blank">Maestral Solutions</a>
-                    <span class="position">Software Developer</span>
-                    <span class="dates">Dec 2020 - Apr 2023</span>
-                </h2>
-                <p>Developed native Android applications in Kotlin for the telecommunications industry. Focused on architecture, feature development, and backend API integrations. Contributed to project delivery and team collaboration, ensuring reliable mobile experiences.</p>
-            </dd>
-            <dd class="clear"></dd>
+        <article class="xp-item">
+          <div class="xp-head">
+            <a href="http://maestralsolutions.com/" class="exp_link" target="_blank" rel="noopener"><b>Maestral Solutions</b></a>
+            <span class="xp-role" id="job_title">Software Developer</span>
+            <span class="xp-dates" id="job_duration">Dec 2020 - Apr 2023</span>
+          </div>
+          <p class="muted">
+            Developed native Android applications in Kotlin for the telecommunications industry. Focused on architecture, feature development, and backend API integrations. Contributed to project delivery and team collaboration, ensuring reliable mobile experiences.
+          </p>
+        </article>
 
-            <dd>
-                <h2>
-                    <a href="https://tribeOS.io" class="exp_link" target="_blank">TribeOS</a>
-                    <span class="position">Software Developer</span>
-                    <span class="dates">Sep 2019 - Dec 2020</span>
-                </h2>
-                <p>Contributed to building a new digital advertising platform from the ground up, focusing on backend development and automation. The mission was to build a fair and transparent ad marketplace with strong anti-fraud mechanisms.</p>
-            </dd>
-            <dd class="clear"></dd>
+        <article class="xp-item">
+          <div class="xp-head">
+            <a href="https://tribeOS.io" class="exp_link" target="_blank" rel="noopener"><b>TribeOS</b></a>
+            <span class="xp-role" id="job_title">Software Developer</span>
+            <span class="xp-dates" id="job_duration">Sep 2019 - Dec 2020</span>
+          </div>
+          <p class="muted">
+            Contributed to building a new digital advertising platform from the ground up, focusing on backend development and automation. The mission was to build a fair and transparent ad marketplace with strong anti-fraud mechanisms.
+          </p>
+        </article>
 
-            <dd>
-                <h2>
-                    <a href="https://softraysolutions.com/" class="exp_link" target="_blank">Softray Solutions</a>
-                    <span class="position">Software Developer Internship</span>
-                    <span class="dates">Nov 2018 - Apr 2019</span>
-                </h2>
-                <p>Contributed to web development using Angular 7, C#, and Cosmos DB, as well as building a companion mobile app in Ionic Framework. Gained early experience in both frontend and mobile development. Left the role to pursue academic advancement.</p>
-            </dd>
-            <dd class="clear"></dd>
+        <article class="xp-item">
+          <div class="xp-head">
+            <a href="https://softraysolutions.com/" class="exp_link" target="_blank" rel="noopener"><b>Softray Solutions</b></a>
+            <span class="xp-role" id="job_title">Software Developer, Internship</span>
+            <span class="xp-dates" id="job_duration">Nov 2018 - Apr 2019</span>
+          </div>
+          <p class="muted">
+            Contributed to web development using Angular 7, C#, and Cosmos DB, as well as building a companion mobile app in Ionic Framework. Gained early experience in both frontend and mobile development. Left the role to pursue academic advancement.
+          </p>
+        </article>
+      </div>
+    </section>
 
-            <dt>Education</dt>
-            <dd>
-                <h2>Engineering and Natural Sciences @ International Burch University</h2>
-                <p><strong>Department:</strong> Information Technologies<br>
-                <strong>Degree:</strong> Bachelor of Science
-            </dd>
-            <dd class="clear"></dd>
+    <!-- Education -->
+    <section class="card stack" id="education" aria-label="Education">
+      <h2>Education</h2>
+      <article>
+        <p><b>Faculty of Engineering, Natural and Medical Sciences</b> · International Burch University</p>
+        <p class="muted">
+          Department: Information Technologies · Degree: Bachelor of Science
+        </p>
+      </article>
+    </section>
 
-            <dt>Skills</dt>
-            <dd>
-                <div class="skills-grid">
-                    <p>Leadership & People Management</p>
-                    <p>Project Delivery</p>
-                    <p>Stakeholder Communication</p>
-                    <p>Client Relationship Management</p>
-                    <p>Designing & Delivering Software Solutions</p>
-                    <p>Technical Roadmapping</p>
-                    <p>Pitching & Presentations</p>
-                </div>
-            </dd>
-            <dd class="clear"></dd>
-        </dl>
+    <!-- Skills -->
+    <section class="card stack" id="skills" aria-label="Skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="chip">Leadership & People Management</span>
+        <span class="chip">Designing & Delivering Software</span>
+        <span class="chip">Technical Roadmapping</span>
+        <span class="chip">Project Delivery</span>
+        <span class="chip">Stakeholder Communication</span>
+        <span class="chip">Client Relationship Management</span>
+        <span class="chip">Pitching & Presentations</span>
+      </div>
+    </section>
+
+    <!-- Contact Me -->
+    <section class="card stack" id="contact" aria-label="Contact Me">
+    <h2>Contact Me</h2>
+    <p class="muted">
+        If you'd like to collaborate, discuss a project, or just connect - feel free to reach out:
+    </p>
+
+    <div class="contact-icons">
+        <a href="mailto:contact@venan24.me" class="email" target="_blank" rel="noopener" aria-label="Email Venan">
+        <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://www.linkedin.com/in/venanosmic/" class="contact_linkedin" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+        <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
     </div>
-</body>
+    </section>
 
+  </main>
+</body>
 </html>
